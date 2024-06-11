@@ -77,7 +77,7 @@ function App() {
             <div className=" absolute inset-0">
               <div className=" flex justify-between">
                 <div
-                  className=" relative"
+                  className=" relative cursor-pointer"
                   onClick={() => setCurrentPage("PLAY")}
                 >
                   <div
@@ -109,7 +109,7 @@ function App() {
                 </div>
                 {/* ------- */}
                 <div
-                  className=" relative "
+                  className=" relative cursor-pointer"
                   onClick={() => setCurrentPage("UTILITY")}
                 >
                   <div
@@ -139,7 +139,7 @@ function App() {
                   </p>
                 </div>
                 <div
-                  className=" relative"
+                  className=" relative cursor-pointer"
                   onClick={() => setCurrentPage("NFTS")}
                 >
                   <div
@@ -169,7 +169,7 @@ function App() {
                   </p>
                 </div>
                 <div
-                  className=" relative"
+                  className=" relative cursor-pointer"
                   onClick={() => setCurrentPage("BUY")}
                 >
                   <div
@@ -208,7 +208,7 @@ function App() {
                   </p>
                 </div>
                 <div
-                  className=" relative"
+                  className=" relative cursor-pointer"
                   onClick={() => setCurrentPage("TEAM")}
                 >
                   <div
@@ -243,7 +243,9 @@ function App() {
         </div>
 
         {/* -------------------------------- */}
-        <div className=" absolute inset-0 mt-[300px] w-[80%] mx-auto">{renderComponent()}</div>
+        <div className=" absolute inset-0 mt-[300px] w-[80%] mx-auto">
+          {renderComponent()}
+        </div>
       </div>
     </div>
   );
