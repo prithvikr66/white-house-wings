@@ -9,26 +9,29 @@ import nest from "./assets/images/emptyNest.png";
 import birdOnNest from "./assets/images/nestedBird.png";
 import { useState } from "react";
 import Play from "./components/Play";
+import Team from "./components/Team";
 import { Utility } from "./components/Utility";
+import Nfts from "./components/Nfts";
+import Buy from "./components/Buy";
 function App() {
   const [currentPage, setCurrentPage] = useState("PLAY");
-  const [currentComponent , setCurrentComponent] = useState(Play);
+
   const renderComponent = () => {
-    switch(currentComponent) {
-      case 'PLAY':
+    switch (currentPage) {
+      case "PLAY":
         return <Play />;
-      case 'UTILITY':
-        return <Component2 />;
-      case 'NFTS':
-        return <Component3 />;
-      case 'BUY':
-        return <Component4 />;
-      case 'TEAM':
-        return <Component5 />;
+      case "UTILITY":
+        return <Utility />;
+      case "NFTS":
+        return <Nfts />;
+      case "BUY":
+        return <Buy />;
+      case "TEAM":
+        return <Team />;
       default:
         return null;
     }
-  }
+  };
 
   return (
     <div className="min-h-screen">
@@ -65,11 +68,11 @@ function App() {
           </div>
         </div>
       </div>
-        {/* -------------------------------------- */}
-      <div className=" relative">
-        <img src={blueSky} className="w-full h-auto " />
+      {/* -------------------------------------- */}
+      <div className=" relative hidden lg:block">
+        <img src={blueSky} className="w-full h-[1000px] " />
         <div className=" absolute inset-0 w-[80%] mx-auto ">
-          <div className=" mt-[300px] relative">
+          <div className=" mt-[100px] relative">
             <img src={stick} className=" w-full absolute inset-0" />
             <div className=" absolute inset-0">
               <div className=" flex justify-between">
@@ -96,7 +99,9 @@ function App() {
 
                   <p
                     className={`font-darumadrop uppercase   text-[32px] text-white ${
-                      currentPage === "PLAY" ? "opacity-100 bird-nest-text" : "opacity-40"
+                      currentPage === "PLAY"
+                        ? "opacity-100 bird-nest-text"
+                        : "opacity-40"
                     } w-[200px] `}
                   >
                     PLAY
@@ -107,9 +112,11 @@ function App() {
                   className=" relative "
                   onClick={() => setCurrentPage("UTILITY")}
                 >
-                  <div className={` bird-nest ${
+                  <div
+                    className={` bird-nest ${
                       currentPage === "UTILITY" ? "opacity-100" : "opacity-40"
-                    } `}></div>
+                    } `}
+                  ></div>
                   {currentPage === "UTILITY" ? (
                     <img
                       src={birdOnNest}
@@ -123,7 +130,9 @@ function App() {
                   )}
                   <p
                     className={`font-darumadrop uppercase   text-[32px] text-white ${
-                      currentPage === "UTILITY" ? "opacity-100 bird-nest-text" : "opacity-40"
+                      currentPage === "UTILITY"
+                        ? "opacity-100 bird-nest-text"
+                        : "opacity-40"
                     } w-[200px] `}
                   >
                     utility
@@ -133,9 +142,11 @@ function App() {
                   className=" relative"
                   onClick={() => setCurrentPage("NFTS")}
                 >
-                  <div className={` bird-nest ${
+                  <div
+                    className={` bird-nest ${
                       currentPage === "NFTS" ? "opacity-100" : "opacity-40"
-                    } `}></div>
+                    } `}
+                  ></div>
                   {currentPage === "NFTS" ? (
                     <img
                       src={birdOnNest}
@@ -149,7 +160,9 @@ function App() {
                   )}
                   <p
                     className={`font-darumadrop uppercase   text-[32px] text-white ${
-                      currentPage === "NFTS" ? "opacity-100 bird-nest-text" : "opacity-40"
+                      currentPage === "NFTS"
+                        ? "opacity-100 bird-nest-text"
+                        : "opacity-40"
                     } w-[200px] `}
                   >
                     nfts
@@ -159,9 +172,11 @@ function App() {
                   className=" relative"
                   onClick={() => setCurrentPage("BUY")}
                 >
-                  <div className={` bird-nest ${
+                  <div
+                    className={` bird-nest ${
                       currentPage === "BUY" ? "opacity-100" : "opacity-40"
-                    } `}></div>
+                    } `}
+                  ></div>
                   {currentPage === "BUY" ? (
                     <img
                       src={birdOnNest}
@@ -175,14 +190,18 @@ function App() {
                   )}
                   <p
                     className={`font-darumadrop uppercase   text-[32px] text-white ${
-                      currentPage === "BUY" ? "opacity-100 bird-nest-text" : "opacity-40"
+                      currentPage === "BUY"
+                        ? "opacity-100 bird-nest-text"
+                        : "opacity-40"
                     } w-[200px] `}
                   >
                     buy
                   </p>
                   <p
                     className={`font-darumadrop uppercase   text-[32px] text-white ${
-                      currentPage === "BUY" ? "opacity-100 bird-nest-text" : "opacity-40"
+                      currentPage === "BUY"
+                        ? "opacity-100 bird-nest-text"
+                        : "opacity-40"
                     } w-[200px] `}
                   >
                     $pigeon
@@ -192,9 +211,13 @@ function App() {
                   className=" relative"
                   onClick={() => setCurrentPage("TEAM")}
                 >
-                  <div className={` bird-nest ${
-                      currentPage === "TEAM" ? "opacity-100 bird-nest-text" : "opacity-40"
-                    } `}></div>
+                  <div
+                    className={` bird-nest ${
+                      currentPage === "TEAM"
+                        ? "opacity-100 bird-nest-text"
+                        : "opacity-40"
+                    } `}
+                  ></div>
                   {currentPage === "TEAM" ? (
                     <img
                       src={birdOnNest}
@@ -220,8 +243,7 @@ function App() {
         </div>
 
         {/* -------------------------------- */}
-       
-       
+        <div className=" absolute inset-0 mt-[300px] w-[80%] mx-auto">{renderComponent()}</div>
       </div>
     </div>
   );
