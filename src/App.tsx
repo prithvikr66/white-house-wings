@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="min-h-screen">
       <div className=" relative">
-        <img src={mainImage} className=" w-full " />
+        <img src={mainImage} className=" w-full lg:h-screen  object-top" />
         <div className=" absolute  bottom-0 w-full  ">
           <div className="w-[80%] mx-auto flex justify-between relative ">
             <div>
