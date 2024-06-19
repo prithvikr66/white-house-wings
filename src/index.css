@@ -266,6 +266,10 @@
   font-family: "darumadrop";
   src: url("../src/assets/fonts/DarumaDropOne-Regular.ttf") format("opentype");
 }
+@font-face {
+  font-family: "dangrek";
+  src: url("../src/assets/fonts/dangrek.ttf") format("opentype");
+}
 
 @media screen and (min-width: 400px) {
   .mascot {

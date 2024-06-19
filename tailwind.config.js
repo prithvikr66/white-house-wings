@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         skyBackgroundImage: "url('./src/assets/images/sky.png')",
+        lightSkyBackgroundImage :"url('./src/assets/images/another-sky.png')"
       },
     },
     fontFamily: {

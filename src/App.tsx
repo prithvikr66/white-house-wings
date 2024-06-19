@@ -86,8 +86,8 @@ function App() {
       <div
         className={`${
           currentPage === "UTILITY" || currentPage === "TEAM"
-            ? "bg-opacity-custom w-full"
-            : "bg-skyBackgroundImage bg-opacity-40 w-full bg-cover bg-center"
+            ? " bg-lightSkyBackgroundImage w-full bg-cover bg-center"
+            : "bg-skyBackgroundImage w-full bg-cover bg-center"
         }   min-h-[100vh]`}
       >
         <div className="lg:w-[80%] w-full mx-auto  ">

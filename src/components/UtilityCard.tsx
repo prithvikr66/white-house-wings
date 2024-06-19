@@ -28,7 +28,7 @@ const UtilityCard1 = () => {
                 <Utility1Icon />
               </div>
             </div>
-            <div className=" bg-[#C2DAF2] h-[180px] w-[270px] ml-[50px] rounded-tl-[20px] rounded-tr-[20px] rounded-br-[20px] rounded-bl-[44px] uppercase dangrek-regular  flex items-center justify-center text-[#3D3D3D] text-center">
+            <div className=" bg-[#C2DAF2] h-[180px] w-[270px] ml-[50px] rounded-tl-[20px] rounded-tr-[20px] rounded-br-[20px] rounded-bl-[44px] uppercase dangrek-regular  flex items-center justify-center text-[#3D3D3D] text-center p-[5px]">
               <p>
                 a unique lottery game where
                 <span className=" text-[#D71F27]">
@@ -112,9 +112,9 @@ const UtilityCard2 = () => {
                 <Utility2Icon />
               </div>
             </div>
-            <div className=" mt-[10px] bg-[#ffffff] h-[180px] w-[270px] ml-[50px] rounded-tl-[20px] rounded-tr-[20px] rounded-br-[20px] rounded-bl-[44px] uppercase dangrek-regular  flex items-center justify-center text-center text-[#3D3D3D] ">
+            <div className=" mt-[10px] bg-[#ffffff] h-[180px] w-[270px] ml-[50px] rounded-tl-[20px] rounded-tr-[20px] rounded-br-[20px] rounded-bl-[44px] uppercase dangrek-regular  flex items-center justify-center text-center text-[#3D3D3D] p-[5px] ">
               <p>
-                Stake $PIGEON
+                Stake $PIGEON{" "}
                 <span className=" text-[#3A80FE]">
                   and be eligible for passive income. we make revenue by taking
                   a 1% fee on every lottery ticket sold..
@@ -193,7 +193,7 @@ const UtilityCard3 = () => {
               <Utility3Icon />
             </div>
           </div>
-          <div className="  bg-[#3A80FE] h-[180px] w-[270px] mx-auto rounded-tl-[20px] rounded-tr-[20px] rounded-br-[20px] rounded-bl-[44px] uppercase dangrek-regular  flex items-center justify-center text-center text-white ">
+          <div className="  bg-[#3A80FE] h-[180px] w-[270px] mx-auto rounded-tl-[20px] rounded-tr-[20px] rounded-br-[20px] rounded-bl-[44px] uppercase dangrek-regular  flex items-center justify-center text-center text-white p-[5px] ">
             <p>
               With each lottery ticket you buy, a small portion of
               <span className=" text-[#FFE920]">$PIGEON is burnt.</span>
