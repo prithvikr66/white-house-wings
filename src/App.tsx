@@ -12,7 +12,14 @@ import Team from "./components/Team";
 import { Utility } from "./components/Utility";
 import Nfts from "./components/Nfts";
 import Buy from "./components/Buy";
-import { CloseMenuIcon, OpenMenuIcon } from "./components/Icons";
+import {
+  CloseMenuIcon,
+  Dextools,
+  EtherscanIcon,
+  OpenMenuIcon,
+  TelegramIcon,
+  TwitterIcons,
+} from "./components/Icons";
 import mobileNavPigeon from "./assets/images/mobile_nav_pigeon.png";
 import { motion } from "framer-motion";
 function App() {
@@ -75,8 +82,8 @@ function App() {
         </div>
       </div>
       {/* -------------------------------------- */}
-      <div className="relative bg-blue-sky bg-repeat min-h-[100vh]">
-        <div className="absolute inset-0 lg:w-[80%] w-full mx-auto ">
+      <div className=" bg-skyBackgroundImage  w-full bg-cover bg-center  min-h-[100vh]">
+        <div className="lg:w-[80%] w-full mx-auto  ">
           {/* ------------------------------------------------------- */}
           {isMenuOpen ? (
             <motion.div
@@ -84,18 +91,18 @@ function App() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -100, opacity: 0 }}
               transition={{ type: "spring", damping: 20, stiffness: 200 }}
-              className=" bg-[#D8EEF6] w-full h-[750px] lg:hidden"
+              className=" bg-[#D8EEF6] w-full h-[500px] lg:hidden"
             >
-              <div className=" flex items-center justify-between p-5 ">
+              <div className=" flex items-center justify-between p-[20px]  ">
                 <div
-                  className=" flex items-center gap-2 cursor-pointer"
+                  className=" flex items-center gap-[20px] sm:gap-[25px] md:gap-[30px] cursor-pointer"
                   onClick={() => {
                     setIsMenuOpen(false);
                     setCurrentPage("PLAY");
                   }}
                 >
                   <p
-                    className={` font-darumadrop uppercase text-[#] text-[24px] ${
+                    className={` font-darumadrop uppercase text-[#] text-[24px] -[50x] ${
                       currentPage === "PLAY"
                         ? "text-[#3A80FE]"
                         : "text-[#3D3D3D]"
@@ -115,7 +122,9 @@ function App() {
                 </button>
               </div>
               <div className=" w-full h-[1px] sm:h-[2px] bg-gradient-to-r from-[#3A80FE]  to-[#D8EEF6]" />
-              <div className=" flex items-center justify-between p-5 ">
+
+              <div className=" w-full h-[1px] sm:h-[2px] " />
+              <div className=" flex items-center justify-between p-[20px]  ">
                 <div
                   className=" flex items-center gap-2  cursor-pointer"
                   onClick={() => {
@@ -141,7 +150,7 @@ function App() {
                 </div>
               </div>
               <div className=" w-full h-[1px] sm:h-[2px] bg-gradient-to-r from-[#3A80FE]  to-[#D8EEF6]" />
-              <div className=" flex items-center justify-between p-5 ">
+              <div className=" flex items-center justify-between p-[20px]  ">
                 <div
                   className=" flex items-center gap-2  cursor-pointer"
                   onClick={() => {
@@ -167,7 +176,7 @@ function App() {
                 </div>
               </div>
               <div className=" w-full h-[1px] sm:h-[2px] bg-gradient-to-r from-[#3A80FE]  to-[#D8EEF6]" />
-              <div className=" flex items-center justify-between p-5 ">
+              <div className=" flex items-center justify-between p-[20px]  ">
                 <div
                   className=" flex items-center gap-2  cursor-pointer"
                   onClick={() => {
@@ -193,7 +202,7 @@ function App() {
                 </div>
               </div>
               <div className=" w-full h-[1px] sm:h-[2px] bg-gradient-to-r from-[#3A80FE]  to-[#D8EEF6]" />
-              <div className=" flex items-center justify-between p-5 ">
+              <div className=" flex items-center justify-between p-[20px]  ">
                 <div
                   className=" flex items-center gap-2  cursor-pointer "
                   onClick={() => {
@@ -219,6 +228,20 @@ function App() {
                 </div>
               </div>
               <div className=" w-full h-[1px] sm:h-[2px] bg-gradient-to-r from-[#3A80FE]  to-[#D8EEF6]" />
+              <div className=" flex mt-5 gap-3 p-5">
+                <a href="" target="_blank">
+                  <TwitterIcons />
+                </a>
+                <a href="" target="_blank">
+                  <TelegramIcon />
+                </a>
+                <a href="" target="_blank">
+                  <Dextools />
+                </a>
+                <a href="" target="_blank">
+                  <EtherscanIcon />
+                </a>
+              </div>
             </motion.div>
           ) : (
             <div className=" lg:hidden flex justify-between p-5 items-center">
@@ -233,176 +256,179 @@ function App() {
             </div>
           )}
           {/* ------------------------------------ */}
-          <div className="hidden lg:block mt-[100px] relative ">
-            <img src={stick} className="w-full absolute inset-0" />
-            <div className="absolute inset-0">
-              <div className="flex justify-between">
-                <div
-                  className="relative cursor-pointer"
-                  onClick={() => setCurrentPage("PLAY")}
-                >
+          <div className=" pt-[100px]">
+            <div className="hidden lg:block  relative  ">
+              <img src={stick} className="w-full absolute inset-0" />
+              <div className="">
+                <div className="flex justify-between">
                   <div
-                    className={`bird-nest ${
-                      currentPage === "PLAY" ? "opacity-100" : "opacity-40"
-                    }`}
-                  ></div>
-                  {currentPage === "PLAY" ? (
-                    <img
-                      src={birdOnNest}
-                      className="absolute inset-0 top-[-90px] left-[-28px] z-10"
-                    />
-                  ) : (
-                    <img
-                      src={nest}
-                      className="absolute inset-0 top-[-25px] left-[-20px] z-10"
-                    />
-                  )}
+                    className="relative cursor-pointer"
+                    onClick={() => setCurrentPage("PLAY")}
+                  >
+                    <div
+                      className={`bird-nest ${
+                        currentPage === "PLAY" ? "opacity-100" : "opacity-40"
+                      }`}
+                    ></div>
+                    {currentPage === "PLAY" ? (
+                      <img
+                        src={birdOnNest}
+                        className="absolute inset-0 top-[-90px] left-[-28px] z-10"
+                      />
+                    ) : (
+                      <img
+                        src={nest}
+                        className="absolute inset-0 top-[-25px] left-[-20px] z-10"
+                      />
+                    )}
 
-                  <p
-                    className={`font-darumadrop uppercase text-[32px] text-white ${
-                      currentPage === "PLAY"
-                        ? "opacity-100 bird-nest-text"
-                        : "opacity-40"
-                    } w-[200px]`}
-                  >
-                    PLAY
-                  </p>
-                </div>
-                {/* ------- */}
-                <div
-                  className="relative cursor-pointer"
-                  onClick={() => setCurrentPage("UTILITY")}
-                >
+                    <p
+                      className={`font-darumadrop uppercase text-[32px] text-white ${
+                        currentPage === "PLAY"
+                          ? "opacity-100 bird-nest-text"
+                          : "opacity-40"
+                      } w-[200px]`}
+                    >
+                      PLAY
+                    </p>
+                  </div>
+                  {/* ------- */}
                   <div
-                    className={`bird-nest ${
-                      currentPage === "UTILITY" ? "opacity-100" : "opacity-40"
-                    }`}
-                  ></div>
-                  {currentPage === "UTILITY" ? (
-                    <img
-                      src={birdOnNest}
-                      className="absolute inset-0 top-[-90px] left-[-28px] z-10"
-                    />
-                  ) : (
-                    <img
-                      src={nest}
-                      className="absolute inset-0 top-[-25px] left-[-20px] z-10"
-                    />
-                  )}
-                  <p
-                    className={`font-darumadrop uppercase text-[32px] text-white ${
-                      currentPage === "UTILITY"
-                        ? "opacity-100 bird-nest-text"
-                        : "opacity-40"
-                    } w-[200px]`}
+                    className="relative cursor-pointer"
+                    onClick={() => setCurrentPage("UTILITY")}
                   >
-                    utility
-                  </p>
-                </div>
-                <div
-                  className="relative cursor-pointer"
-                  onClick={() => setCurrentPage("NFTS")}
-                >
+                    <div
+                      className={`bird-nest ${
+                        currentPage === "UTILITY" ? "opacity-100" : "opacity-40"
+                      }`}
+                    ></div>
+                    {currentPage === "UTILITY" ? (
+                      <img
+                        src={birdOnNest}
+                        className="absolute inset-0 top-[-90px] left-[-28px] z-10"
+                      />
+                    ) : (
+                      <img
+                        src={nest}
+                        className="absolute inset-0 top-[-25px] left-[-20px] z-10"
+                      />
+                    )}
+                    <p
+                      className={`font-darumadrop uppercase text-[32px] text-white ${
+                        currentPage === "UTILITY"
+                          ? "opacity-100 bird-nest-text"
+                          : "opacity-40"
+                      } w-[200px]`}
+                    >
+                      utility
+                    </p>
+                  </div>
                   <div
-                    className={`bird-nest ${
-                      currentPage === "NFTS" ? "opacity-100" : "opacity-40"
-                    }`}
-                  ></div>
-                  {currentPage === "NFTS" ? (
-                    <img
-                      src={birdOnNest}
-                      className="absolute inset-0 top-[-90px] left-[-28px] z-10"
-                    />
-                  ) : (
-                    <img
-                      src={nest}
-                      className="absolute inset-0 top-[-25px] left-[-20px] z-10"
-                    />
-                  )}
-                  <p
-                    className={`font-darumadrop uppercase text-[32px] text-white ${
-                      currentPage === "NFTS"
-                        ? "opacity-100 bird-nest-text"
-                        : "opacity-40"
-                    } w-[200px]`}
+                    className="relative cursor-pointer"
+                    onClick={() => setCurrentPage("NFTS")}
                   >
-                    nfts
-                  </p>
-                </div>
-                <div
-                  className="relative cursor-pointer"
-                  onClick={() => setCurrentPage("BUY")}
-                >
+                    <div
+                      className={`bird-nest ${
+                        currentPage === "NFTS" ? "opacity-100" : "opacity-40"
+                      }`}
+                    ></div>
+                    {currentPage === "NFTS" ? (
+                      <img
+                        src={birdOnNest}
+                        className="absolute inset-0 top-[-90px] left-[-28px] z-10"
+                      />
+                    ) : (
+                      <img
+                        src={nest}
+                        className="absolute inset-0 top-[-25px] left-[-20px] z-10"
+                      />
+                    )}
+                    <p
+                      className={`font-darumadrop uppercase text-[32px] text-white ${
+                        currentPage === "NFTS"
+                          ? "opacity-100 bird-nest-text"
+                          : "opacity-40"
+                      } w-[200px]`}
+                    >
+                      nfts
+                    </p>
+                  </div>
                   <div
-                    className={`bird-nest ${
-                      currentPage === "BUY" ? "opacity-100" : "opacity-40"
-                    }`}
-                  ></div>
-                  {currentPage === "BUY" ? (
-                    <img
-                      src={birdOnNest}
-                      className="absolute inset-0 top-[-90px] left-[-28px] z-10"
-                    />
-                  ) : (
-                    <img
-                      src={nest}
-                      className="absolute inset-0 top-[-25px] left-[-20px] z-10"
-                    />
-                  )}
-                  <p
-                    className={`font-darumadrop uppercase text-[32px] text-white ${
-                      currentPage === "BUY"
-                        ? "opacity-100 bird-nest-text"
-                        : "opacity-40"
-                    } w-[200px]`}
+                    className="relative cursor-pointer"
+                    onClick={() => setCurrentPage("BUY")}
                   >
-                    buy
-                  </p>
-                  <p
-                    className={`font-darumadrop uppercase text-[32px] text-white ${
-                      currentPage === "BUY"
-                        ? "opacity-100 bird-nest-text"
-                        : "opacity-40"
-                    } w-[200px]`}
-                  >
-                    $pigeon
-                  </p>
-                </div>
-                <div
-                  className="relative cursor-pointer"
-                  onClick={() => setCurrentPage("TEAM")}
-                >
+                    <div
+                      className={`bird-nest ${
+                        currentPage === "BUY" ? "opacity-100" : "opacity-40"
+                      }`}
+                    ></div>
+                    {currentPage === "BUY" ? (
+                      <img
+                        src={birdOnNest}
+                        className="absolute inset-0 top-[-90px] left-[-28px] z-10"
+                      />
+                    ) : (
+                      <img
+                        src={nest}
+                        className="absolute inset-0 top-[-25px] left-[-20px] z-10"
+                      />
+                    )}
+                    <p
+                      className={`font-darumadrop uppercase text-[32px] text-white ${
+                        currentPage === "BUY"
+                          ? "opacity-100 bird-nest-text"
+                          : "opacity-40"
+                      } w-[200px]`}
+                    >
+                      buy
+                    </p>
+                    <p
+                      className={`font-darumadrop uppercase text-[32px] text-white ${
+                        currentPage === "BUY"
+                          ? "opacity-100 bird-nest-text"
+                          : "opacity-40"
+                      } w-[200px]`}
+                    >
+                      $pigeon
+                    </p>
+                  </div>
                   <div
-                    className={`bird-nest ${
-                      currentPage === "TEAM"
-                        ? "opacity-100 bird-nest-text"
-                        : "opacity-40"
-                    }`}
-                  ></div>
-                  {currentPage === "TEAM" ? (
-                    <img
-                      src={birdOnNest}
-                      className="absolute inset-0 top-[-90px] left-[-28px] z-10"
-                    />
-                  ) : (
-                    <img
-                      src={nest}
-                      className="absolute inset-0 top-[-25px] left-[-20px] z-10"
-                    />
-                  )}
-                  <p
-                    className={`font-darumadrop uppercase text-[32px] text-white ${
-                      currentPage === "TEAM" ? "opacity-100" : "opacity-40"
-                    } w-[200px]`}
+                    className="relative cursor-pointer"
+                    onClick={() => setCurrentPage("TEAM")}
                   >
-                    team
-                  </p>
+                    <div
+                      className={`bird-nest ${
+                        currentPage === "TEAM"
+                          ? "opacity-100 bird-nest-text"
+                          : "opacity-40"
+                      }`}
+                    ></div>
+                    {currentPage === "TEAM" ? (
+                      <img
+                        src={birdOnNest}
+                        className="absolute inset-0 top-[-90px] left-[-28px] z-10"
+                      />
+                    ) : (
+                      <img
+                        src={nest}
+                        className="absolute inset-0 top-[-25px] left-[-20px] z-10"
+                      />
+                    )}
+                    <p
+                      className={`font-darumadrop uppercase text-[32px] text-white ${
+                        currentPage === "TEAM" ? "opacity-100" : "opacity-40"
+                      } w-[200px]`}
+                    >
+                      team
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          {renderComponent()}
+          {/* ------------------------------------------------------------- */}
 
+          <div className="lg:mt-[0px]">{renderComponent()}</div>
           {/* ---------------------------------------------------------- */}
         </div>
       </div>
