@@ -36,4 +36,36 @@ const CloseMenuIcon = () => {
   );
 };
 
-export { OpenMenuIcon, CloseMenuIcon };
+const QrIcon = () => {
+  return (
+    <div className=" w-full h-full">
+      <svg
+        width="28"
+        height="28"
+        viewBox="0 0 28 28"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M3.5 3.5H7V7H3.5V3.5Z" fill="#3D3D3D" />
+        <path
+          d="M10.5 0V10.5H0V0H10.5ZM8.75 1.75H1.75V8.75H8.75V1.75ZM7 21H3.5V24.5H7V21Z"
+          fill="#3D3D3D"
+        />
+        <path
+          d="M10.5 17.5V28H0V17.5H10.5ZM1.75 19.25V26.25H8.75V19.25H1.75ZM21 3.5H24.5V7H21V3.5Z"
+          fill="#3D3D3D"
+        />
+        <path
+          d="M17.5 0V10.5H28V0H17.5ZM26.25 1.75V8.75H19.25V1.75H26.25ZM14 1.75V0H15.75V3.5H14V7H12.25V1.75H14ZM14 10.5V7H15.75V10.5H14ZM10.5 14V12.25H12.25V10.5H14V14H15.75V12.25H24.5V14H17.5V15.75H12.25V14H10.5ZM10.5 14V15.75H3.5V14H1.75V15.75H0V12.25H5.25V14H10.5ZM28 15.75H26.25V12.25H28V15.75ZM26.25 15.75H24.5V19.25H28V17.5H26.25V15.75ZM19.25 15.75H22.75V17.5H21V19.25H19.25V15.75ZM22.75 21V19.25H21V21H19.25V22.75H15.75V24.5H21V21H22.75ZM22.75 21H28V22.75H24.5V24.5H22.75V21ZM15.75 19.25V21H17.5V17.5H12.25V19.25H15.75Z"
+          fill="#3D3D3D"
+        />
+        <path
+          d="M12.25 21H14V26.25H21V28H12.25V21ZM28 24.5V28H22.75V26.25H26.25V24.5H28Z"
+          fill="#3D3D3D"
+        />
+      </svg>
+    </div>
+  );
+};
+
+export { OpenMenuIcon, CloseMenuIcon , QrIcon };

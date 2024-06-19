@@ -76,7 +76,7 @@ function App() {
       </div>
       {/* -------------------------------------- */}
       <div className="relative bg-blue-sky bg-repeat min-h-[100vh]">
-        <div className="absolute inset-0 lg:w-[80%] w-full mx-auto">
+        <div className="absolute inset-0 lg:w-[80%] w-full mx-auto ">
           {/* ------------------------------------------------------- */}
           {isMenuOpen ? (
             <motion.div
@@ -233,7 +233,7 @@ function App() {
             </div>
           )}
           {/* ------------------------------------ */}
-          <div className="hidden lg:block mt-[100px] relative">
+          <div className="hidden lg:block mt-[100px] relative ">
             <img src={stick} className="w-full absolute inset-0" />
             <div className="absolute inset-0">
               <div className="flex justify-between">
@@ -401,9 +401,9 @@ function App() {
               </div>
             </div>
           </div>
+          {renderComponent()}
 
           {/* ---------------------------------------------------------- */}
-          {renderComponent()}
         </div>
       </div>
     </div>
