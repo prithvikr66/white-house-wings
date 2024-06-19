@@ -209,6 +209,12 @@
   border: 5px, white;
 }
 
+.bg-blue-sky {
+  background-image: url("./assets//images/sky.png");
+  background-repeat: repeat;
+  background-size: cover;
+}
+
 @font-face {
   font-family: "darumadrop";
   src: url("../src/assets/fonts/DarumaDropOne-Regular.ttf") format("opentype");

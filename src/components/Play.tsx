@@ -6,7 +6,7 @@ import thunderIcon from "../assets/images/thunderIcon.svg";
 const Play = () => {
   return (
     <div className=" w-full ">
-      <div className=" flex justify-between items-center ">
+      <div className=" flex flex-col lg:flex-row justify-between items-center ">
         <div className="    ">
           <img src={play1} className=" mx-auto w-[80%]" />
           <p className=" text-[24px] xl:text-[26px] 2xl:text-[28px]  text-white font-darumadrop uppercase  text-center">
