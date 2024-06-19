@@ -1,6 +1,6 @@
 const Buy = () => {
   return (
-    <div className=" lg:mt-[300px]">
+    <div className=" lg:mt-[100px]">
       <div className=" flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-[20px] xl:gap-[22px] 2xl:gap-[25px]">
         <p className=" font-darumadrop text-[24px] text-white uppercase text-center">
           Contract address: <span>0xe8b...8a18</span>

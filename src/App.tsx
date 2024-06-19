@@ -25,6 +25,7 @@ import { motion } from "framer-motion";
 function App() {
   const [currentPage, setCurrentPage] = useState("PLAY");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [navTextColor, setNavTextColor] = useState("#FFFFFF");
 
   const renderComponent = () => {
     switch (currentPage) {
@@ -82,7 +83,13 @@ function App() {
         </div>
       </div>
       {/* -------------------------------------- */}
-      <div className=" bg-skyBackgroundImage  w-full bg-cover bg-center  min-h-[100vh]">
+      <div
+        className={`${
+          currentPage === "UTILITY" || currentPage === "TEAM"
+            ? "bg-opacity-custom w-full"
+            : "bg-skyBackgroundImage bg-opacity-40 w-full bg-cover bg-center"
+        }   min-h-[100vh]`}
+      >
         <div className="lg:w-[80%] w-full mx-auto  ">
           {/* ------------------------------------------------------- */}
           {isMenuOpen ? (
@@ -102,7 +109,7 @@ function App() {
                   }}
                 >
                   <p
-                    className={` font-darumadrop uppercase text-[#] text-[24px] -[50x] ${
+                    className={` font-darumadrop uppercase  text-[24px] -[50x] ${
                       currentPage === "PLAY"
                         ? "text-[#3A80FE]"
                         : "text-[#3D3D3D]"
@@ -246,12 +253,20 @@ function App() {
           ) : (
             <div className=" lg:hidden flex justify-between p-5 items-center">
               <p
-                className={`font-darumadrop uppercase text-[32px] text-white opacity-100 bird-nest-text`}
+                className={`font-darumadrop uppercase text-[32px] ${
+                  currentPage === "UTILITY" || currentPage === "TEAM"
+                    ? "text-[#2D2D2D]"
+                    : "text-white"
+                } opacity-100 bird-nest-text`}
               >
                 {currentPage}
               </p>
               <button className="" onClick={() => setIsMenuOpen(true)}>
-                <OpenMenuIcon />
+                {currentPage === "UTILITY" || currentPage === "TEAM" ? (
+                  <OpenMenuIcon color="#3A80FE" />
+                ) : (
+                  <OpenMenuIcon color="#ffffff" />
+                )}
               </button>
             </div>
           )}
@@ -263,7 +278,10 @@ function App() {
                 <div className="flex justify-between">
                   <div
                     className="relative cursor-pointer"
-                    onClick={() => setCurrentPage("PLAY")}
+                    onClick={() => {
+                      setCurrentPage("PLAY");
+                      setNavTextColor("#FFFFFF");
+                    }}
                   >
                     <div
                       className={`bird-nest ${
@@ -283,19 +301,23 @@ function App() {
                     )}
 
                     <p
-                      className={`font-darumadrop uppercase text-[32px] text-white ${
+                      style={{ color: navTextColor }}
+                      className={`font-darumadrop uppercase text-[32px]   ${
                         currentPage === "PLAY"
-                          ? "opacity-100 bird-nest-text"
+                          ? "opacity-100 bird-nest-text "
                           : "opacity-40"
                       } w-[200px]`}
                     >
                       PLAY
                     </p>
                   </div>
-                  {/* ------- */}
+                  {/* ------------------------------------------ */}
                   <div
                     className="relative cursor-pointer"
-                    onClick={() => setCurrentPage("UTILITY")}
+                    onClick={() => {
+                      setCurrentPage("UTILITY");
+                      setNavTextColor("#3A80FE");
+                    }}
                   >
                     <div
                       className={`bird-nest ${
@@ -314,9 +336,10 @@ function App() {
                       />
                     )}
                     <p
-                      className={`font-darumadrop uppercase text-[32px] text-white ${
+                      style={{ color: navTextColor }}
+                      className={`font-darumadrop uppercase text-[32px] ${
                         currentPage === "UTILITY"
-                          ? "opacity-100 bird-nest-text"
+                          ? "opacity-100 bird-nest-text "
                           : "opacity-40"
                       } w-[200px]`}
                     >
@@ -325,7 +348,10 @@ function App() {
                   </div>
                   <div
                     className="relative cursor-pointer"
-                    onClick={() => setCurrentPage("NFTS")}
+                    onClick={() => {
+                      setCurrentPage("NFTS");
+                      setNavTextColor("#FFFFFF");
+                    }}
                   >
                     <div
                       className={`bird-nest ${
@@ -344,9 +370,10 @@ function App() {
                       />
                     )}
                     <p
-                      className={`font-darumadrop uppercase text-[32px] text-white ${
+                      style={{ color: navTextColor }}
+                      className={`font-darumadrop uppercase text-[32px]  ${
                         currentPage === "NFTS"
-                          ? "opacity-100 bird-nest-text"
+                          ? "opacity-100 bird-nest-text "
                           : "opacity-40"
                       } w-[200px]`}
                     >
@@ -355,7 +382,10 @@ function App() {
                   </div>
                   <div
                     className="relative cursor-pointer"
-                    onClick={() => setCurrentPage("BUY")}
+                    onClick={() => {
+                      setCurrentPage("BUY");
+                      setNavTextColor("#FFFFFF");
+                    }}
                   >
                     <div
                       className={`bird-nest ${
@@ -374,18 +404,20 @@ function App() {
                       />
                     )}
                     <p
-                      className={`font-darumadrop uppercase text-[32px] text-white ${
+                      style={{ color: navTextColor }}
+                      className={`font-darumadrop uppercase text-[32px]  ${
                         currentPage === "BUY"
-                          ? "opacity-100 bird-nest-text"
+                          ? "opacity-100 bird-nest-text "
                           : "opacity-40"
                       } w-[200px]`}
                     >
                       buy
                     </p>
                     <p
-                      className={`font-darumadrop uppercase text-[32px] text-white ${
+                      style={{ color: navTextColor }}
+                      className={`font-darumadrop uppercase text-[32px]  ${
                         currentPage === "BUY"
-                          ? "opacity-100 bird-nest-text"
+                          ? "opacity-100 bird-nest-text "
                           : "opacity-40"
                       } w-[200px]`}
                     >
@@ -394,7 +426,10 @@ function App() {
                   </div>
                   <div
                     className="relative cursor-pointer"
-                    onClick={() => setCurrentPage("TEAM")}
+                    onClick={() => {
+                      setCurrentPage("TEAM");
+                      setNavTextColor("#3A80FE");
+                    }}
                   >
                     <div
                       className={`bird-nest ${
@@ -415,8 +450,9 @@ function App() {
                       />
                     )}
                     <p
-                      className={`font-darumadrop uppercase text-[32px] text-white ${
-                        currentPage === "TEAM" ? "opacity-100" : "opacity-40"
+                      style={{ color: navTextColor }}
+                      className={`font-darumadrop uppercase text-[32px]  ${
+                        currentPage === "TEAM" ? "opacity-100 " : "opacity-40"
                       } w-[200px]`}
                     >
                       team
