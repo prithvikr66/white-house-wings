@@ -49,7 +49,7 @@ function App() {
       <div className="relative">
         <img
           src={mainImage}
-          className="w-full lg:h-screen h-[70vh] object-center lg:object-top"
+          className="w-full lg:h-screen h-[50vh] object-center lg:object-top"
         />
         <div className="absolute bottom-0 w-full">
           <div className="w-[80%] mx-auto flex justify-between relative">
