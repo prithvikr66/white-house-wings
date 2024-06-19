@@ -5,10 +5,13 @@ import play4 from "../assets/images/play4.png";
 import thunderIcon from "../assets/images/thunderIcon.svg";
 const Play = () => {
   return (
-    <div className=" w-full  ">
+    <div className=" w-full mt-[-50px] lg:mt-[50px]  mb-[100px] lg:mb-[100px]">
       <div className=" flex flex-col lg:flex-row justify-between items-center gap-[10px] lg:gap-0 ">
         <div className="    ">
-          <img src={play1} className=" mx-auto w-[250px] lg:w-[230px] xl:w-[250px]  h-auto" />
+          <img
+            src={play1}
+            className=" mx-auto w-[250px] lg:w-[230px] xl:w-[250px]  h-auto"
+          />
           <p className=" text-[24px] xl:text-[26px] 2xl:text-[28px]  text-white font-darumadrop uppercase  text-center">
             Start
           </p>
@@ -17,7 +20,10 @@ const Play = () => {
           </p>
         </div>
         <div className="  ">
-          <img src={play2} className=" mx-auto w-[250px] lg:w-[230px] xl:w-[250px]  h-auto" />
+          <img
+            src={play2}
+            className=" mx-auto w-[250px] lg:w-[230px] xl:w-[250px]  h-auto"
+          />
           <p className=" text-[24px] xl:text-[26px] 2xl:text-[28px]  text-white font-darumadrop uppercase text-center">
             race
           </p>
@@ -26,7 +32,10 @@ const Play = () => {
           </p>
         </div>
         <div className="  ">
-          <img src={play3} className=" mx-auto w-[250px] lg:w-[230px] xl:w-[250px]  h-auto" />
+          <img
+            src={play3}
+            className=" mx-auto w-[250px] lg:w-[230px] xl:w-[250px]  h-auto"
+          />
           <p className=" text-[24px] xl:text-[26px] 2xl:text-[28px]  text-white font-darumadrop uppercase text-center mt-5">
             lottery
           </p>
@@ -35,7 +44,10 @@ const Play = () => {
           </p>
         </div>
         <div className="  ">
-          <img src={play4} className=" mx-auto  w-[250px] lg:w-[230px] xl:w-[250px]  h-auto" />
+          <img
+            src={play4}
+            className=" mx-auto  w-[250px] lg:w-[230px] xl:w-[250px]  h-auto"
+          />
           <p className=" lg:relative lg:top-[-10px] text-[24px] xl:text-[26px] 2xl:text-[28px]  text-white font-darumadrop uppercase text-center ">
             Results
           </p>

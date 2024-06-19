@@ -22,6 +22,7 @@ import {
 } from "./components/Icons";
 import mobileNavPigeon from "./assets/images/mobile_nav_pigeon.png";
 import { motion } from "framer-motion";
+import Navbar from "./components/Footer";
 function App() {
   const [currentPage, setCurrentPage] = useState("PLAY");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,7 +61,7 @@ function App() {
               />
             </div>
             <div className="absolute bottom-[10px] sm:bottom-[20px] md:bottom-[25px] 2xl:bottom-[30px] left-1/2 transform -translate-x-1/2 flex flex-col lg:gap-2 items-center">
-              <button className="uppercase text-white text-[10px] sm:text-[20px] md:text-[25px] lg:text-[28px] xl:text-[30px] 2xl:text-[33px] p-1 lg:p-2 bg-[#3A80FE] lets-start-button font-darumadrop hover:bg-[#0050E1] hover:scale-[1.1]">
+              <button className="uppercase text-white text-[15px] sm:text-[20px] md:text-[25px] lg:text-[28px] xl:text-[30px] 2xl:text-[33px] p-1 lg:p-2 bg-[#3A80FE] lets-start-button font-darumadrop hover:bg-[#0050E1] hover:scale-[1.1]">
                 <div className="flex items-center justify-center">
                   Let's play
                   <img src={thunderIcon} className="2xl:mt-4 w-1/6" />
@@ -69,7 +70,7 @@ function App() {
               <div>
                 <img
                   src={trophyPigeon}
-                  className="w-1/3 mx-auto sm:w-1/2 md:w-1/2 lg:w-full"
+                  className="w-[50px] h-auto mx-auto sm:w-1/2 md:w-1/2 lg:w-full"
                 />
               </div>
             </div>
@@ -467,6 +468,7 @@ function App() {
           <div className="lg:mt-[0px]">{renderComponent()}</div>
           {/* ---------------------------------------------------------- */}
         </div>
+      <Navbar/>
       </div>
     </div>
   );
