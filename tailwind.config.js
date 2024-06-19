@@ -9,6 +9,7 @@ export default {
     },
     fontFamily: {
       darumadrop: ["darumadrop", "sans-serif"],
+      dangrek: ["Dangrek", "sans-serif"],
     },
   },
   plugins: [],

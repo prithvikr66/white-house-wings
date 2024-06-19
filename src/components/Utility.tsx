@@ -1,13 +1,11 @@
-import utility1 from "../assets/images/utility-1.png";
+import { UtilityCard1, UtilityCard2, UtilityCard3 } from "./UtilityCard";
 
 export const Utility = () => {
   return (
-    <div className="flex justify-center">
-      <div className="relative utility-card w-1/3 bg-yellow-200 overflow-visible">
-        <div className="flex items-center justify-center">
-          <img src={utility1} className="absolute w-1/2 top-[-50px] z-10" />
-        </div>
-      </div>
+    <div className="flex flex-col lg:flex-row items-center  justify-center mt-[-50px] lg:mt-[50px] lg:w-[100%] mx-auto lg:justify-between">
+      <UtilityCard1 />
+      <UtilityCard2/>
+      <UtilityCard3 />
     </div>
   );
 };
