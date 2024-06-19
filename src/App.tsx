@@ -89,7 +89,7 @@ function App() {
           currentPage === "UTILITY" || currentPage === "TEAM"
             ? " light-sky-bg w-full bg-cover bg-center"
             : "sky-bg w-full bg-cover bg-center"
-        }   min-h-[100vh]`}
+        }   `}
       >
         <div className="lg:w-[80%] w-full mx-auto  ">
           {/* ------------------------------------------------------- */}
@@ -98,7 +98,7 @@ function App() {
               initial={{ y: -100, opacity: 1 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -100, opacity: 0 }}
-              transition={{ type: "spring", damping: 20, stiffness: 200 }}
+              transition={{ type: "spring", damping: 10, stiffness: 100 }}
               className=" bg-[#D8EEF6] w-full h-[500px] lg:hidden"
             >
               <div className=" flex items-center justify-between p-[20px]  ">
