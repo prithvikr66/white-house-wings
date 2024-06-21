@@ -11,7 +11,6 @@ import Play from "./components/Play";
 import Team from "./components/Team";
 import { Utility } from "./components/Utility";
 import Nfts from "./components/Nfts";
-import Buy from "./components/Buy";
 import {
   CloseMenuIcon,
   Dextools,
@@ -23,6 +22,7 @@ import {
 import mobileNavPigeon from "./assets/images/mobile_nav_pigeon.png";
 import { motion } from "framer-motion";
 import Navbar from "./components/Footer";
+import Stake from "./components/Stake";
 function App() {
   const [currentPage, setCurrentPage] = useState("PLAY");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +37,7 @@ function App() {
       case "NFTS":
         return <Nfts />;
       case "BUY":
-        return <Buy />;
+        return <Stake />;
       case "TEAM":
         return <Team />;
       default:
@@ -57,7 +57,7 @@ function App() {
             <div>
               <img
                 src={mascot1}
-                className="2xl:w-[300px] xl:w-[250px] w-[80px] sm:w-[150px] md:w-[170px] lg:w-[200px] h-auto mascot"
+                className="2xl:w-[300px] xl:w-[250px] w-[100px] sm:w-[150px] md:w-[170px] lg:w-[200px] h-auto mascot"
               />
             </div>
             <div className="absolute bottom-[10px] sm:bottom-[20px] md:bottom-[25px] 2xl:bottom-[30px] left-1/2 transform -translate-x-1/2 flex flex-col lg:gap-2 items-center">
@@ -77,7 +77,7 @@ function App() {
             <div>
               <img
                 src={mascot2}
-                className="2xl:w-[300px] xl:w-[250px] w-[80px] sm:w-[150px] md:w-[170px] lg:w-[200px] h-auto mascot"
+                className="2xl:w-[300px] xl:w-[250px] w-[100px] sm:w-[150px] md:w-[170px] lg:w-[200px] h-auto mascot"
               />
             </div>
           </div>
@@ -199,7 +199,7 @@ function App() {
                         : "text-[#3D3D3D]"
                     }`}
                   >
-                    buy $race
+                    presale
                   </p>
                   <img
                     src={mobileNavPigeon}
@@ -412,7 +412,7 @@ function App() {
                           : "opacity-40"
                       } w-[200px]`}
                     >
-                      buy
+                      presale
                     </p>
                     <p
                       style={{ color: navTextColor }}
@@ -421,9 +421,7 @@ function App() {
                           ? "opacity-100 bird-nest-text "
                           : "opacity-40"
                       } w-[200px]`}
-                    >
-                      $pigeon
-                    </p>
+                    ></p>
                   </div>
                   <div
                     className="relative cursor-pointer"
@@ -468,7 +466,7 @@ function App() {
           <div className="lg:mt-[0px]">{renderComponent()}</div>
           {/* ---------------------------------------------------------- */}
         </div>
-      <Navbar/>
+        <Navbar />
       </div>
     </div>
   );
